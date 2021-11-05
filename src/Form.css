@@ -39,13 +39,13 @@
   }
   
   .form-img-2 {
-    width: 60%;
-    height: 60%;
+    width: 52%;
+    height: 42%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
   
   .form-success {
     text-align: center;
