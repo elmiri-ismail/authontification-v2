@@ -3,13 +3,14 @@ import useForm from './useForm';
 import validate from './validatenInfo';
 import './Form.css';
 
-const FormSignup = () => {
-    const { handleChange, values, handleSubmit, errors} = useForm(validate);
+const FormSignup = ({submitForm}) => {
+    const { handleChange, values, handleSubmit, errors}
+     = useForm(submitForm,validate);
 
     return (
         <div className='form-content-right'>
             <form className='form' onSubmit={handleSubmit}>
-                <center>
+                
                     <h1>Get started with us today ! create your account by filling out the information below. </h1>
                     <div className='form-inputs'>
                         <label htmlFor='username' className='form-label' >
@@ -49,12 +50,13 @@ const FormSignup = () => {
                             type='submit'>
                             Sign up
                         </button>
+                        <br />
                         <span className="form-input-login">
                             Already have an account ? Login <a href="#">here</a>
                         </span>
 
                     </div>
-                </center>
+                
             </form>
 
         </div>
