@@ -3,7 +3,10 @@ import React from 'react';
 const FormSuccess = () => {
     return (
         <div className="form-content-right">
-            <div className="form-success">We Have received your request</div>
+            <div className="form-success">We Have received your request
+                <a href="/">Log out</a>
+            </div>
+
             <img src='img/check.png' alt='success-image' className="form-img-2" />
         </div>
     )
