@@ -45,6 +45,13 @@
       "password": "ismail",
       "password2": "ismail",
       "id": 7
+    },
+    {
+      "username": "mohamed",
+      "email": "mohamed@gmail.com",
+      "password": "momomomo",
+      "password2": "momomomo",
+      "id": 8
     }
   ]
 }

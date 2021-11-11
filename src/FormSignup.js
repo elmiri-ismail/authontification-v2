@@ -88,7 +88,9 @@ useEffect(
     }
     return errors;
   }
+//END VALIDATION 
 
+//START SIGN UP FORM
   return (
     <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
