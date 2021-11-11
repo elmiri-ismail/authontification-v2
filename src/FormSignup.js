@@ -2,13 +2,13 @@ import React,{useState,useEffect} from 'react';
 // import validate from './validateInfo';
 import useForm from './useForm';
 // import FormSuccess from './FormSuccess';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Form.css';
 import axios from "axios";
 
 const FormSignup = ({ submitForm }) => {
- 
+  const history=useHistory()
   let user={
     username:"",
     email:"",
@@ -37,11 +37,12 @@ const handleSubmit=(e)=>{
   e.preventDefault();
   setIsSubmitting(true);
   seterr(validateInfo(formv));
-
+ 
+  // START VALIDATION
 
   if (Object.keys(error).length === 0 && isSubmitting) {
     addit();
-    axios.post("http://localhost:300/users",formv).then(alert("Success ."));
+    axios.post("http://localhost:300/users",formv).then(history.replace('/Login'));
   }
 
 }
@@ -66,9 +67,7 @@ useEffect(
     if (!values.username.trim()) {
       errors.username = 'Username required';
     }
-    // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
-    //   errors.name = 'Enter a valid name';
-    // }
+   
   
     if (!values.email) {
       errors.email = 'Email required';

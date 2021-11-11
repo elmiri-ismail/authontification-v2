@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const FormSuccess = () => {
     return (
-        <div className="form-content-right">
-            <div className="form-success">We Have received your request
+        <div>
+            <div ><h1>WELCOME</h1>
                 
             </div>
 
             <img src='img/check.png' alt='success-image' className="form-img-2" />
-            <a  href="/">Log out</a>
+           <button className="mt-5"> <Link className="logout" to="/">Log out</Link> </button>
             
         </div>
     )

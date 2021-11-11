@@ -1,36 +1,38 @@
-import React ,{useState} from 'react';
-import { Link } from 'react-router-dom';
-import axios from "axios"
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import axios from "axios";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Login = () => {
+    const history = useHistory();
 
-    let user={
-        email:"",
-        password:""
-      }
-      const [formv,setv]=useState(user);
-
-    const chng=(e)=>{
-        const {name,value}=e.target;
-        setv({...formv,[name]:value});
+    let user = {
+        email: "",
+        password: ""
     }
-    
-    const f=()=>{
-        let v=false;
+    const [formv, setv] = useState(user);
+
+    const chng = (e) => {
+        const { name, value } = e.target;
+        setv({ ...formv, [name]: value });
+    }
+
+    const f = () => {
+        let v = false;
         axios.get("http://localhost:300/users").then(
-        user=>{
-            for(let i=0;i<user.data.length;i++){
-                if(user.data[i].email===formv.email){
-                    v=true;
+            user => {
+                for (let i = 0; i < user.data.length; i++) {
+                    if (user.data[i].email === formv.email) {
+                        v = true;
+                    }
+                }
+                if (v === true) {
+                    // alert("equal");
+                    history.replace('/FormSuccess');
                 }
             }
-            if(v===true){
-                alert("equal");
-            }
-        }
-        
-    );
+
+        );
     }
 
     return (
@@ -38,7 +40,7 @@ const Login = () => {
             <div class="row">
                 <div className="col  mt-5">
                     <form action="" method="POST" class="login-email">
-                        <h1 >Login</h1>
+                        <h1 >Sign In</h1>
                         <div class="col form-group mt-3" >
                             <input class="form-control w-" type="email" placeholder="Email" onChange={chng} name="email" value={formv.email} />
                         </div>

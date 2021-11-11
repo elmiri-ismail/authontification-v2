@@ -52,6 +52,55 @@
       "password": "momomomo",
       "password2": "momomomo",
       "id": 8
+    },
+    {
+      "username": "hamza",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 9
+    },
+    {
+      "username": "admin",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 10
+    },
+    {
+      "username": "admin",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 11
+    },
+    {
+      "username": "__mr.smaeil1",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 12
+    },
+    {
+      "username": "admin",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 13
+    },
+    {
+      "username": "admin",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 14
+    },
+    {
+      "username": "khalid tortiya",
+      "email": "khalid@gmail.com",
+      "password": "khalid",
+      "password2": "khalid",
+      "id": 15
     }
   ]
 }
