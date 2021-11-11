@@ -153,3 +153,31 @@
   color: #27cdff;
   font-weight: 600;
 }
+.btn-primary {
+color: #fff;
+    background-color: #06deef;
+    border-color: #0d6efd;}
+    .form-control {
+    display: block;
+    
+    padding: 0.375
+rem
+ 0.75
+rem
+;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1
+px
+ solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25
+rem
+;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

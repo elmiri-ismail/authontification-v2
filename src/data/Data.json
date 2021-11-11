@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "ismail"
+    },
+    {
+      "username": "admin",
+      "email": "admin@gg.cc",
+      "password": "123QQQ",
+      "password2": "123QQQ",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "email": "admin@gg.cc",
+      "password": "123QQQ",
+      "password2": "",
+      "id": 3
+    },
+    {
+      "username": "anass ",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 4
+    },
+    {
+      "username": "__mr.smaeil1",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 5
+    },
+    {
+      "username": "__mr.smaeil1",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 6
+    },
+    {
+      "username": "__mr.smaeil1",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 7
+    }
+  ]
+}
