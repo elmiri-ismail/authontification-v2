@@ -101,6 +101,27 @@
       "password": "khalid",
       "password2": "khalid",
       "id": 15
+    },
+    {
+      "username": "admin",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 16
+    },
+    {
+      "username": "admin",
+      "email": "elmiri.ismail.dev@gmail.com",
+      "password": "ismail",
+      "password2": "ismail",
+      "id": 17
+    },
+    {
+      "username": "omar ",
+      "email": "omar@gmail.com",
+      "password": "omar22",
+      "password2": "omar22",
+      "id": 18
     }
   ]
 }

@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom';
 
 const FormSuccess = () => {
     return (
-        <div>
-            <div ><h1>WELCOME</h1>
-                
-            </div>
+        <div >
+            <div className="d-flex justify-content-center align-items-center">
+            <h1>WELCOME <br/>YOU'RE <br/>NEW HERE</h1>
+            <img src='img/undraw.svg' alt='success-image' className="w-25 mt-5" />
 
-            <img src='img/check.png' alt='success-image' className="form-img-2" />
-           <button className="mt-5"> <Link className="logout" to="/">Log out</Link> </button>
-            
+            </div>
+            <button className=" btn btn-primary "> <Link className="logout" to="/">Log out</Link> </button>
+
+
+
+
         </div>
     )
 }
