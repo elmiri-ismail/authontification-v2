@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 // import validate from './validateInfo';
 import useForm from './useForm';
 // import FormSuccess from './FormSuccess';
@@ -8,67 +8,68 @@ import './Form.css';
 import axios from "axios";
 
 const FormSignup = ({ submitForm }) => {
-  const history=useHistory()
-  let user={
-    username:"",
-    email:"",
-    password:"",
-    password2:""
+  const history = useHistory()
+  let user = {
+    username: "",
+    email: "",
+    password: "",
+    password2: ""
   }
-  let user1={
-    username:"",
-    email:"",
-    password:"",
+  let user1 = {
+    username: "",
+    email: "",
+    password: "",
   }
 
-  const [formv,setv]=useState(user);
-  const [formv1,setv1]=useState(user1);
-  const [error,seterr]=useState({});
+  const [formv, setv] = useState(user);
+  const [formv1, setv1] = useState(user1);
+  const [error, seterr] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const addit=()=>{
-    setv1({username:formv.username,
-    email:formv.email,
-  password:formv.password2
-  });
+  const addit = () => {
+    setv1({
+      username: formv.username,
+      email: formv.email,
+      password: formv.password2
+    });
   }
 
-const handleSubmit=(e)=>{
-  e.preventDefault();
-  setIsSubmitting(true);
-  seterr(validateInfo(formv));
- 
-  // START VALIDATION
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    seterr(validateInfo(formv));
 
-  if (Object.keys(error).length === 0 && isSubmitting) {
-    addit();
-    axios.post("http://localhost:300/users",formv).then(history.replace('/Login'));
-  }
+    // START VALIDATION
 
-}
-useEffect(
-  () => {
     if (Object.keys(error).length === 0 && isSubmitting) {
-      setIsSubmitting(true);
+      addit();
+      axios.post("http://localhost:300/users", formv).then(history.replace('/FormSuccess'));
     }
-  },
-  [error]
-);
+
+  }
+  useEffect(
+    () => {
+      if (Object.keys(error).length === 0 && isSubmitting) {
+        setIsSubmitting(true);
+      }
+    },
+    [error]
+  );
 
 
-  const handleChange=(e)=>{
-    const {name,value}=e.target;
-    setv({...formv,[name]:value});
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setv({ ...formv, [name]: value });
   }
 
   function validateInfo(values) {
     let errors = {};
-  
+
     if (!values.username.trim()) {
       errors.username = 'Username required';
     }
-   
-  
+
+
     if (!values.email) {
       errors.email = 'Email required';
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {
@@ -79,7 +80,7 @@ useEffect(
     } else if (values.password.length < 6) {
       errors.password = 'Password needs to be 6 characters or more';
     }
-  
+
     if (!values.password2) {
       errors.password2 = 'Password is required';
     } else if (values.password2 !== values.password) {
@@ -87,14 +88,14 @@ useEffect(
     }
     return errors;
   }
-//END VALIDATION 
+  //END VALIDATION 
 
-//START SIGN UP FORM
+  //START SIGN UP FORM
   return (
     <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
         <h1>
-          
+
           Get started with us today! Create your account by filling out the
           information below.
         </h1>

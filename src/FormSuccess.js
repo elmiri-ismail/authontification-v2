@@ -10,7 +10,7 @@ const FormSuccess = () => {
             <img src='img/undraw.svg' alt='success-image' className="w-25 mt-5" />
 
             </div>
-            <button className=" btn btn-primary "> <Link className="logout" to="/">Log out</Link> </button>
+            <button className=" btn btn-primary "> <Link className="logout" to="/Lo">Log out</Link> </button>
 
 
 
